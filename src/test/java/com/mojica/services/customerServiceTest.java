@@ -28,4 +28,5 @@ public class customerServiceTest {
         assertNotNull(customerService.createNewCustomer(customer).getId());
 
     }
+
 }

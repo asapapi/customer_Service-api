@@ -5,6 +5,8 @@ import com.mojica.entities.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class CustomerService {
 
@@ -23,5 +25,9 @@ public class CustomerService {
     public Customer createNewCustomer(Customer customer) {
         customer.setId(customer.getId());
         return customerServiceRepo.save(customer);
+    }
+
+    public List getAllCostumers() {
+        return  customerServiceRepo.findAll();
     }
 }
